@@ -97,7 +97,8 @@
             Interested in learning more about our science or partnering with us?
             Reach out using the form below and our team will be in touch.
         </p>
-        <form id="contact-form">
+        <!-- The action uses mailto: to send form data via the visitor's email client to the company's email address. -->
+        <form id="contact-form" action="mailto:info@atopiushealth.com" method="POST" enctype="text/plain">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required placeholder="Your Name" />
@@ -122,13 +123,7 @@
     <!-- JavaScript -->
     <script>
         // Smooth scroll behavior is handled via CSS (scroll-behavior: smooth).
-        // Handle contact form submission without a backend
-        const form = document.getElementById('contact-form');
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for contacting Atopius Health! We will get back to you soon.');
-            form.reset();
-        });
+        // No additional JavaScript needed for the contact form because it uses a mailto: action.
     </script>
 </body>
 </html>
