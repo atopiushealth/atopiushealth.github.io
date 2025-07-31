@@ -41,10 +41,12 @@ nav {
 }
 
 /* Make navigation links container flexible and allow wrapping */
+/* Container for navigation links: wrap items when horizontal space runs out */
 nav .nav-links {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 25px; /* uniform gap instead of margin on anchors */
 }
 
 /* Ensure links do not wrap mid‑word */
@@ -61,7 +63,6 @@ nav .nav-logo {
 nav .nav-links a {
     color: var(--text-light);
     text-decoration: none;
-    margin-left: 25px;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -310,8 +311,9 @@ footer {
     .hero .tagline {
         font-size: 1rem;
     }
+    /* Reduce font size on smaller screens; spacing handled by gap property */
     nav .nav-links a {
-        margin-left: 15px;
+        margin-left: 0;
         font-size: 0.9rem;
     }
     .about {
