@@ -1,0 +1,314 @@
+/*
+ * Stylesheet for the Atopius Health single‑page website.
+ *
+ * Colour palette derives from the supplied logo to ensure harmony
+ * across the page. The design emphasises clarity, readability and
+ * simplicity while conveying a professional, forward‑looking ethos.
+ */
+
+:root {
+    --primary-color: #063b5d; /* dark blue reflecting the logo */
+    --secondary-color: #3d87a6; /* mid blue for accents */
+    --accent-color: #1c74a3; /* highlight colour for hover states */
+    --light-bg: #f4f8fc; /* very light background for contrast */
+    --text-dark: #0b2540; /* dark text for readability on light backgrounds */
+    --text-light: #ffffff; /* white text for dark backgrounds */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(6, 59, 93, 0.8); /* semi‑transparent dark background */
+    backdrop-filter: blur(4px);
+}
+
+nav .nav-logo {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+nav .nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 59, 93, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-logo {
+    width: 160px;
+    margin-bottom: 20px;
+    /* Invert the logo colours to make the dark blue artwork stand out on a dark hero background */
+    filter: brightness(0) invert(1);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero .tagline {
+    font-size: 1.3rem;
+    margin: 15px 0 35px;
+    font-weight: 400;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 30px;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background-color: var(--light-bg);
+}
+
+.about-text {
+    flex: 1 1 450px;
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.about-image {
+    flex: 1 1 350px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Values / Approach Section */
+.values {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.values h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.values-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.value {
+    flex: 1 1 250px;
+    max-width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+}
+
+.value h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.value p {
+    font-size: 1rem;
+    line-height: 1.6;
+    /* light text colour for contrast against dark card backgrounds */
+    color: #d6e7f5;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 14px 16px;
+    border: 1px solid #c6d6e4;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-submit {
+    align-self: flex-start;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #a0b7cf;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+    .hero .tagline {
+        font-size: 1rem;
+    }
+    nav .nav-links a {
+        margin-left: 15px;
+        font-size: 0.9rem;
+    }
+    .about {
+        padding: 60px 20px;
+    }
+    .values {
+        padding: 60px 20px;
+    }
+    .contact {
+        padding: 60px 20px;
+    }
+}

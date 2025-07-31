@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atopius Health</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">Atopius Health</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#values">Our Approach</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="logo.png" alt="Atopius Health logo" class="hero-logo" />
+            <h1>Atopius Health</h1>
+            <p class="tagline">Microbial Inspiration. Molecular Precision.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>
+                Atopius Health is a biotechnology company on a mission to transform the way
+                therapeutics are discovered. By studying the remarkable diversity of
+                metabolites produced by microbes across Earth’s ecosystems, we uncover
+                evolutionarily conserved blueprints for small‑molecule design.
+            </p>
+            <p>
+                Our research harnesses nature’s own chemistry, using microbial
+                metabolites as inspiration for the next generation of precision
+                therapies. We believe that the molecules honed by billions of years of
+                evolution hold the key to more effective, safer drugs for diseases
+                lacking robust treatment options.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="microbe.png" alt="Stylized microbe illustration" />
+        </div>
+    </section>
+
+    <!-- Values / Approach Section -->
+    <section class="values" id="values">
+        <h2>Our Approach</h2>
+        <div class="values-container">
+            <div class="value">
+                <h3>Microbial Inspiration</h3>
+                <p>
+                    We start by exploring the chemistry of microbes, mining their
+                    metabolites for unique scaffolds and functional motifs that have
+                    persisted through evolutionary pressure. These natural blueprints
+                    guide our discovery efforts.
+                </p>
+            </div>
+            <div class="value">
+                <h3>Molecular Precision</h3>
+                <p>
+                    Using insights from microbial metabolites, we craft small
+                    molecules with targeted activity and favourable pharmacology.
+                    Precision engineering ensures our molecules interact selectively
+                    with their intended biological targets.
+                </p>
+            </div>
+            <div class="value">
+                <h3>Therapeutic Potential</h3>
+                <p>
+                    Our pipeline focuses on areas of high unmet need, where current
+                    treatments fall short. We strive to translate microbial wisdom
+                    into therapies that improve patient outcomes across a variety of
+                    disease states.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            Interested in learning more about our science or partnering with us?
+            Reach out using the form below and our team will be in touch.
+        </p>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name" />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email" />
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Atopius Health. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scroll behavior is handled via CSS (scroll-behavior: smooth).
+        // Handle contact form submission without a backend
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for contacting Atopius Health! We will get back to you soon.');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
